@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secure Portfolio | STONERO</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <h2>STONERO</h2>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#tools">Security Tools</a></li>
+      <li><a href="#login-demo">Login Demo</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <h1>Hi, I'm STONERO 👋</h1>
+    <p>Web Developer & Future Cybersecurity Engineer</p>
+  </section>
+
+  <section id="tools">
+    <h2>Security Tools</h2>
+    
+    <div class="tool">
+      <h3>Password Strength Meter</h3>
+      <input type="password" id="password" placeholder="Enter password..." oninput="checkPassword()">
+      <div id="strength-bar"></div>
+      <p id="strength-text"></p>
+    </div>
+
+    <div class="tool">
+      <h3>Common Password Detector</h3>
+      <input type="password" id="common-pass" placeholder="Check common weak passwords..." oninput="checkCommonPassword()">
+      <p id="common-result"></p>
+    </div>
+  </section>
+
+  <!-- Login Demo -->
+  <section id="login-demo">
+    <h2>Login Demo (Vulnerable vs Secure)</h2>
+    
+    <div class="login-container">
+      <h3>🔴 Vulnerable Login (Never use in real apps)</h3>
+      <input type="text" id="vuln-username" placeholder="Username" />
+      <input type="password" id="vuln-password" placeholder="Password" />
+      <button onclick="vulnerableLogin()">Login (Vulnerable)</button>
+      <p id="vuln-result"></p>
+    </div>
+
+    <div class="login-container">
+      <h3>🟢 Secure Login (Best Practice)</h3>
+      <input type="text" id="secure-username" placeholder="Username" />
+      <input type="password" id="secure-password" placeholder="Password" />
+      <button onclick="secureLogin()">Login (Secure)</button>
+      <p id="secure-result"></p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I'm currently learning Web Development and Cybersecurity. This portfolio is my practice lab where I build features and intentionally break them to learn security concepts.</p>
+    <p>Goal: Become a professional Full-Stack Developer & Ethical Hacker.</p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
