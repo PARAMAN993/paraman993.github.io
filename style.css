@@ -147,3 +147,14 @@ function secureLogin() {
 
   result.innerHTML = "✅ Login successful!<br><strong>✅ Input validated properly.</strong>";
 }
+
+#projects {
+  margin-top: 40px;
+}
+
+.project {
+  background: #1e1e1e;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 15px;
+}
