@@ -1,58 +1,13 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name | Full-Stack + Security</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  <style>
-    body { font-family: 'Inter', system-ui, sans-serif; }
-    .hero-bg { background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%); }
-  </style>
-</head>
-<body class="bg-zinc-950 text-zinc-100">
+<div class="grid md:grid-cols-2 gap-6">
+  <!-- XSS Card -->
+  <a href="xss-demo.html" class="block bg-zinc-900 p-6 rounded-2xl border border-zinc-700 hover:border-red-500 transition">
+    <h3 class="text-xl font-semibold text-red-400">XSS Attack Demo</h3>
+    <p class="text-zinc-400 mt-2">See how Cross-Site Scripting works and how to exploit it</p>
+  </a>
 
-  <!-- Navigation -->
-  <nav class="fixed top-0 w-full bg-zinc-900/80 backdrop-blur-md z-50 border-b border-zinc-800">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-emerald-400">YourName</h1>
-      <div class="space-x-8">
-        <a href="#about" class="hover:text-emerald-400 transition">About</a>
-        <a href="#projects" class="hover:text-emerald-400 transition">Projects</a>
-        <a href="#security" class="hover:text-emerald-400 transition">Security Demos</a>
-        <a href="#contact" class="hover:text-emerald-400 transition">Contact</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero -->
-  <section class="hero-bg min-h-screen flex items-center pt-20">
-    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-      <div>
-        <h2 class="text-5xl md:text-7xl font-bold leading-tight">Full-Stack Developer<br>& Cybersecurity Enthusiast</h2>
-        <p class="mt-6 text-xl text-zinc-400">Building secure web applications and breaking them ethically.</p>
-        <div class="mt-8 flex gap-4">
-          <a href="#projects" class="bg-emerald-500 hover:bg-emerald-600 px-8 py-4 rounded-xl font-semibold transition">View Projects</a>
-          <a href="#" class="border border-zinc-700 hover:border-zinc-400 px-8 py-4 rounded-xl font-semibold transition">Download CV</a>
-        </div>
-      </div>
-      <div class="flex justify-center">
-        <div class="w-80 h-80 bg-gradient-to-br from-emerald-400 to-cyan-400 rounded-3xl rotate-6 shadow-2xl overflow-hidden">
-          <!-- Add your photo here -->
-          <img src="your-photo.jpg" alt="Your Name" class="w-full h-full object-cover -rotate-6">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Security Demos Section (We'll add content below) -->
-  <section id="security" class="py-24 bg-zinc-900">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-12">Security Learning Demos</h2>
-      <!-- XSS and Password Hashing cards will go here -->
-    </div>
-  </section>
-
-</body>
-</html>
+  <!-- Password Hashing Card -->
+  <a href="password-hashing-demo.html" class="block bg-zinc-900 p-6 rounded-2xl border border-zinc-700 hover:border-emerald-500 transition">
+    <h3 class="text-xl font-semibold text-emerald-400">Password Hashing Demo</h3>
+    <p class="text-zinc-400 mt-2">How to securely hash passwords using Web Crypto API</p>
+  </a>
+</div>
