@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XSS Attack Demo</title>
+    <style>
+        body { font-family: Arial; background: #0f172a; color: #e2e8f0; padding: 40px; }
+        .vulnerable { background: #450a0a; padding: 20px; border-radius: 8px; }
+        .safe { background: #14532d; padding: 20px; border-radius: 8px; }
+    </style>
+</head>
+<body>
+    <h1>XSS Attack Demo</h1>
+    <p><a href="index.html">← Back to Home</a></p>
+
+    <h2>Vulnerable Version (Don't do this in production!)</h2>
+    <div class="vulnerable">
+        <input type="text" id="comment" placeholder="Type a comment">
+        <button onclick="submitComment()">Submit</button>
+        <div id="output"></div>
+    </div>
+
+    <h2>Safe Version (Using textContent)</h2>
+    <div class="safe">
+        <input type="text" id="safe-comment" placeholder="Type a comment">
+        <button onclick="submitSafeComment()">Submit Safely</button>
+        <div id="safe-output"></div>
+    </div>
+
+    <script>
+        function submitComment() {
+            const comment = document.getElementById('comment').value;
+            document.getElementById('output').innerHTML = comment;   // Vulnerable to XSS
+        }
+        function submitSafeComment() {
+            const comment = document.getElementById('safe-comment').value;
+            document.getElementById('safe-output').textContent = comment; // Safe
+        }
+    </script>
+</body>
+</html>
